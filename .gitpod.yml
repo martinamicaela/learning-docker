@@ -4,15 +4,24 @@ image:
 vscode:
   extensions:
     - esbenp.prettier-vscode
-    - dbaeumer.vscode-eslint
+    - dbaeumer.vscode- - ms-python.python
+    - ms-toolsai.jupyter
+    - ms-azuretools.vscode-docker
+
 
 tasks:
   - name: Install dependencies
     command: npm install
 
-  - name: Build
-    command: npm run build
+  - name: Start server
+    command: npm start
+
 
 ports:
   - port: 3000
     onOpen: open-preview
+  - port: 8080
+    onOpen: open-preview
+  - port: 8000
+    onOpen: open-preview
+    
